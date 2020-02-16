@@ -1,4 +1,8 @@
-module.exports = function countCats(/* matrix */) {
-  throw 'Not implemented';
-  // remove line with error and write your code here
+module.exports = function countCats( matrix ) {
+  return matrix.reduce((acc,cury)=>{
+    return acc+cury.reduce((accy, curx)=>{
+      return curx==="^^"? accy = accy + 1: accy
+    },0)
+  },0
+  )
 };
